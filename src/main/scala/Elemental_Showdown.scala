@@ -19,13 +19,51 @@ object Elemental_Showdown {
   def playGame(p1:Player, p2:Player):String = {
     var isSomeoneDead = false
 
-    while (true) {
+    //TODO: CHECK TO SEE IF ANYONE IS DEAD
+    while (!isSomeoneDead) {
       var playerChoice = getPlayerChoice(p1)
       var computerChoice = getComputerChoice()
-      //determine who gets damaged / how much dmg
+      var dmg = determineDmg(playerChoice, computerChoice)
+
+      if (dmg < 0) {
+        p2.damage(0-dmg)
+        damagePrint(computerChoice, playerChoice, p2, p1)
+      }
+      else if (dmg > 0) {
+        p2.damage(dmg)
+        damagePrint(playerChoice, computerChoice, p1, p2)
+      }
+      else {
+        noDamagePrint(playerChoice)
+      }
       //is anyone dead?
     }
-    return ""
+    return "" // FIXME
+  }
+
+  // TODO: PRINT DAMAGE OUTPUT
+  def damagePrint(losingElementInt:Int, winningElement:Int, loser:Player, winner:Player) {
+
+  }
+
+  // TODO: PRINT NODAMAGE OUTPUT
+  def noDamagePrint(element:Int) {
+
+  }
+
+  def determineDmg(choice1:Int, choice2:Int):Int ={
+  /*
+    This function determines amount of damage / who gets damaged. If
+    return value is negative, magnitude of damage goes against player 2.
+  */
+    var dmgDet = choice1 - choice2
+
+    if (dmgDet == 0) return 0
+    else if (dmgDet == 1) return -1
+    else if (dmgDet == 4) return 1
+    else if (dmgDet == 3) return -2
+    else if (dmgDet == 2) return 2
+    else return 0
   }
 
   def getComputerChoice():Int = {
