@@ -118,3 +118,69 @@ WARNING: Unmatched cancel notification for request id 4489
 [0m2021.07.13 13:46:17 INFO  time: compiled project-0 in 0.88s[0m
 [0m2021.07.13 13:46:32 INFO  compiling project-0 (1 scala source)[0m
 [0m2021.07.13 13:46:32 INFO  time: compiled project-0 in 0.88s[0m
+Jul 13, 2021 2:06:50 PM scala.meta.internal.pc.CompletionProvider expected$1
+WARNING: null
+[0m2021.07.13 14:07:28 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.13 14:07:28 INFO  time: compiled project-0 in 0.18s[0m
+[0m2021.07.13 14:07:46 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.13 14:07:46 INFO  time: compiled project-0 in 0.19s[0m
+[0m2021.07.13 14:08:00 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.13 14:08:00 INFO  time: compiled project-0 in 0.16s[0m
+[0m2021.07.13 14:08:03 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.13 14:08:03 INFO  time: compiled project-0 in 0.16s[0m
+[0m2021.07.13 14:08:46 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.13 14:08:46 INFO  time: compiled project-0 in 0.15s[0m
+[0m2021.07.13 14:11:01 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.13 14:11:01 INFO  time: compiled project-0 in 0.16s[0m
+[0m2021.07.13 14:11:07 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.13 14:11:07 INFO  time: compiled project-0 in 0.24s[0m
+[0m2021.07.13 14:11:26 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.13 14:11:26 INFO  time: compiled project-0 in 0.83s[0m
+[0m2021.07.13 14:13:25 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.13 14:13:25 INFO  time: compiled project-0 in 0.24s[0m
+[0m2021.07.13 14:13:33 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.13 14:13:33 INFO  time: compiled project-0 in 0.83s[0m
+Jul 13, 2021 2:14:29 PM scala.meta.internal.pc.CompilerAccess scala$meta$internal$pc$CompilerAccess$$retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Jul 13, 2021 2:14:29 PM scala.meta.internal.pc.CompilerAccess scala$meta$internal$pc$CompilerAccess$$handleError
+SEVERE: null
+java.lang.NullPointerException
+	at scala.reflect.internal.Definitions$DefinitionsClass.isByNameParamType(Definitions.scala:379)
+	at scala.reflect.internal.TreeInfo.isStableIdent(TreeInfo.scala:130)
+	at scala.reflect.internal.TreeInfo.isStableIdentifier(TreeInfo.scala:105)
+	at scala.reflect.internal.TreeInfo.isPath(TreeInfo.scala:95)
+	at scala.reflect.internal.TreeInfo.admitsTypeSelection(TreeInfo.scala:147)
+	at scala.tools.nsc.interactive.Global.stabilizedType(Global.scala:963)
+	at scala.tools.nsc.interactive.Global.typedTreeAt(Global.scala:812)
+	at scala.meta.internal.pc.HoverProvider.typedHoverTreeAt(HoverProvider.scala:239)
+	at scala.meta.internal.pc.HoverProvider.hover(HoverProvider.scala:26)
+
+Jul 13, 2021 2:14:29 PM scala.meta.internal.pc.CompilerAccess scala$meta$internal$pc$CompilerAccess$$retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Jul 13, 2021 2:14:30 PM scala.meta.internal.pc.CompilerAccess scala$meta$internal$pc$CompilerAccess$$handleError
+SEVERE: null
+java.lang.NullPointerException
+	at scala.reflect.internal.Definitions$DefinitionsClass.isByNameParamType(Definitions.scala:379)
+	at scala.reflect.internal.TreeInfo.isStableIdent(TreeInfo.scala:130)
+	at scala.reflect.internal.TreeInfo.isStableIdentifier(TreeInfo.scala:105)
+	at scala.reflect.internal.TreeInfo.isPath(TreeInfo.scala:95)
+	at scala.reflect.internal.TreeInfo.admitsTypeSelection(TreeInfo.scala:147)
+	at scala.tools.nsc.interactive.Global.stabilizedType(Global.scala:963)
+	at scala.tools.nsc.interactive.Global.typedTreeAt(Global.scala:812)
+	at scala.meta.internal.pc.HoverProvider.typedHoverTreeAt(HoverProvider.scala:239)
+	at scala.meta.internal.pc.HoverProvider.hover(HoverProvider.scala:26)
+
+[0m2021.07.13 14:16:29 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.13 14:16:29 INFO  time: compiled project-0 in 0.24s[0m
+[0m2021.07.13 14:18:07 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.13 14:18:08 INFO  time: compiled project-0 in 1.05s[0m
+[0m2021.07.13 14:18:56 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.13 14:18:56 INFO  time: compiled project-0 in 0.84s[0m
+[0m2021.07.13 14:19:42 INFO  shutting down Metals[0m
+[0m2021.07.13 14:19:42 INFO  Shut down connection with build server.[0m
+[0m2021.07.13 14:19:42 INFO  Shut down connection with build server.[0m
+No more data in the server stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the client stdin, exiting...
+No more data in the client stdin, exiting...
+No more data in the server stdin, exiting...
