@@ -9,6 +9,12 @@ object Elemental_Showdown {
     val scanner = new Scanner(System.in)
 
     print("Enter your name: ")
+
+    // FOR TESTING PRINTS OF ASCII
+    //println()
+    //print_defeat()
+
+
     var name = scanner.nextLine()
     print("\u001b[2J")
     //scanner.close()
@@ -43,7 +49,7 @@ object Elemental_Showdown {
         damagePrint(playerChoice, computerChoice, p1, p2, dmg.abs)
       }
       else {
-        println(playerChoice + " " + computerChoice)
+        //println(playerChoice + " " + computerChoice)
         noDamagePrint(playerChoice)
       }
       //is anyone dead?
@@ -60,14 +66,74 @@ object Elemental_Showdown {
     return winner // FIXME
   }
 
+  def print_battle(winner:Int, loser:Int) {
+    if(winner == loser) {
+      print_tie()
+      return
+    }
+    winner match {
+      case 1 => print_wood()
+      case 2 => print_fire()
+      case 3 => print_earth()
+      case 4 => print_metal()
+      case 5 => print_water()
+      case default => println()
+    }
+    print_defeat()
+    loser match {
+      case 1 => print_wood()
+      case 2 => print_fire()
+      case 3 => print_earth()
+      case 4 => print_metal()
+      case 5 => print_water()
+      case default => println()
+    }
+  }
+
+  def print_wood() {
+    println("                  /--/\n                 /  /\n                / °/\n               /  /\n              /__/")
+    println("                              _\n                             | |\n     __      _____   ___   __| |\n     \\ \\ /\\ / / _ \\ / _ \\ / _` |\n      \\ V  V / (_) | (_) | (_| |\n       \\_/\\_/ \\___/ \\___/ \\__,_|")
+
+  }
+
+  def print_fire() {
+    println("            )\\ \n          )( ( \\\n         /  )(  (\n         \\_(__)_/\n")
+    println("       __ _          \n      / _(_)         \n     | |_ _ _ __ ___ \n     |  _| | '__/ _ \\\n     | | | | | |  __/\n     |_| |_|_|  \\___|\n")
+  }
+
+  def print_water() {
+    println("               ( ( (\n                ) ) )\n               ( ( (\n                ) ) ) \n")
+    println("                    _            \n                   | |           \n     __      ____ _| |_ ___ _ __ \n     \\ \\ /\\ / / _` | __/ _ \\ '__|\n      \\ V  V / (_| | ||  __/ |   \n       \\_/\\_/ \\__,_|\\__\\___|_|   \n")
+  }
+
+  def print_metal() {
+    println("                   /\\\n                  / /\n                 / / \n              __/ /__\n               /_/   \n")
+    println("                     _        _ \n                    | |      | |\n      _ __ ___   ___| |_ __ _| |\n     | '_ ` _ \\ / _ \\ __/ _` | |\n     | | | | | |  __/ || (_| | |\n     |_| |_| |_|\\___|\\__\\__,_|_|\n")
+  }
+
+  def print_earth() {
+    println("               /\\\n              /  \\/\\ \n             /\\   \\ \\\n            /__\\___\\_\\\n")
+    println("                      _   _     \n                     | | | |    \n       ___  __ _ _ __| |_| |__  \n      / _ \\/ _` | '__| __| '_ \\ \n     |  __/ (_| | |  | |_| | | |\n      \\___|\\__,_|_|   \\__|_| |_|\n")
+  }
+
+  def print_defeat() {
+    println("           _       __           _       \n          | |     / _|         | |      \n        __| | ___| |_ ___  __ _| |_ ___ \n  ___  / _` |/ _ \\  _/ _ \\/ _` | __/ __|  ___\n /__/ | (_| |  __/ ||  __/ (_| | |_\\__ \\ /__/\n       \\__,_|\\___|_| \\___|\\__,_|\\__|___/\n")
+  }
+
+  def print_tie() {
+    println("      _   _      \n     | | (_)     \n     | |_ _  ___ \n     | __| |/ _ \\\n     | |_| |  __/\n      \\__|_|\\___|\n")
+  }
+
   // TODO: UPDATE PRINT STATEMENT TO ADD FLAIR
   def damagePrint(losingElementInt:Int, winningElement:Int, loser:Player, winner:Player, dmg:Int) {
+    print_battle(winningElement, losingElementInt)
     println(winner.getName + " has damaged " + loser.getName + " by using " + elements(winningElement) + " against " + elements(losingElementInt))
     println(loser.getName()+" has suffered " + dmg + " damage! They now have " + loser.getHP + " health.")
   }
 
   // TODO: UPDATE FOR FLAIR
   def noDamagePrint(element:Int) {
+    print_tie()
     println("Both players used " + element + ". No damage given!")
   }
 

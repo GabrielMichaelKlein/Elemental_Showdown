@@ -184,3 +184,153 @@ No more data in the server stdin, exiting...
 No more data in the client stdin, exiting...
 No more data in the client stdin, exiting...
 No more data in the server stdin, exiting...
+[0m2021.07.14 11:02:45 INFO  Started: Metals version 0.10.4 in workspace 'C:\Users\gaber\Desktop\Revature Items\Project 0' for client Visual Studio Code 1.58.1.[0m
+[0m2021.07.14 11:02:50 INFO  time: initialize in 5.5s[0m
+[0m2021.07.14 11:02:49 INFO  Attempting to connect to the build server...[0m
+[0m2021.07.14 11:02:50 WARN  no build target for: C:\Users\gaber\Desktop\Revature Items\Project 0\src\main\scala\Elemental_Showdown.scala[0m
+[0m2021.07.14 11:02:50 INFO  skipping build import with status 'Installed'[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol tcp --port 33795'...
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+[0m2021.07.14 11:02:53 INFO  no build target: using presentation compiler with only scala-library: 2.12.14[0m
+Waiting for the bsp connection to come up...
+Waiting for the bsp connection to come up...
+[0m2021.07.14 11:02:56 INFO  time: code lens generation in 2.19s[0m
+[0m2021.07.14 11:02:56 INFO  time: code lens generation in 5.7s[0m
+Waiting for the bsp connection to come up...
+No server running at 127.0.0.1:8212, let's fire one...
+Resolving ch.epfl.scala:bloop-frontend_2.12:1.4.8-19-4d9f966b...
+Starting bloop server at 127.0.0.1:8212...
+Attempting a connection to the server...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Loading 2 projects from 'c:\Users\gaber\Desktop\Revature Items\Project 0\.bloop'...
+[0m[32m[D][0m Loading project from 'c:\Users\gaber\Desktop\Revature Items\Project 0\.bloop\project-0-test.json'
+[0m[32m[D][0m Loading project from 'c:\Users\gaber\Desktop\Revature Items\Project 0\.bloop\project-0.json'
+[0m[32m[D][0m Cache miss for scala instance org.scala-lang:scala-compiler:2.11.12.
+[0m[32m[D][0m   => C:\Users\gaber\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\jline\jline\2.14.3\jline-2.14.3.jar
+[0m[32m[D][0m   => C:\Users\gaber\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-parser-combinators_2.11\1.0.4\scala-parser-combinators_2.11-1.0.4.jar
+[0m[32m[D][0m   => C:\Users\gaber\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-xml_2.11\1.0.5\scala-xml_2.11-1.0.5.jar
+[0m[32m[D][0m   => C:\Users\gaber\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-compiler\2.11.12\scala-compiler-2.11.12.jar
+[0m[32m[D][0m   => C:\Users\gaber\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.11.12\scala-library-2.11.12.jar
+[0m[32m[D][0m   => C:\Users\gaber\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-reflect\2.11.12\scala-reflect-2.11.12.jar
+[0m[32m[D][0m Configured SemanticDB in projects 'project-0-test', 'project-0'
+[0m[32m[D][0m Missing analysis file for project 'project-0-test'
+[0m[32m[D][0m Loading previous analysis for 'project-0' from 'C:\Users\gaber\Desktop\Revature Items\Project 0\target\streams\compile\bloopAnalysisOut\_global\streams\inc_compile_2.11.zip'.
+[0m[32m[D][0m Waiting for a connection at 127.0.0.1:33795...
+The server is listening for incoming connections at tcp://127.0.0.1:33795...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.07.14 11:02:58 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\gaber\AppData\Local\scalameta\metals\cache\bsp.trace.json[0m
+[0m2021.07.14 11:02:58 INFO  Attempting to connect to the build server...[0m
+Starting the bsp launcher for bloop...
+Opening a bsp server connection with 'bsp --protocol tcp --port 13954'...
+Waiting for the bsp connection to come up...
+[0m[32m[D][0m Loading workspace settings from bloop.settings.json
+[0m[32m[D][0m Waiting for a connection at 127.0.0.1:13954...
+The server is listening for incoming connections at tcp://127.0.0.1:13954...
+Starting thread that pumps stdin and redirects it to the bsp server...
+Starting thread that pumps server stdout and redirects it to the client stdout...
+[0m2021.07.14 11:02:58 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\gaber\AppData\Local\scalameta\metals\cache\bsp.trace.json[0m
+[0m2021.07.14 11:02:58 INFO  time: Connected to build server in 8.07s[0m
+[0m2021.07.14 11:02:58 INFO  Connected to Build server: Bloop v1.4.8-19-4d9f966b[0m
+[0m2021.07.14 11:02:59 INFO  time: Imported build in 0.24s[0m
+[0m2021.07.14 11:03:00 INFO  no build target: using presentation compiler with only scala-library: 2.12.13[0m
+[0m2021.07.14 11:03:04 INFO  time: indexed workspace in 5.6s[0m
+Jul 14, 2021 11:03:12 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 59
+[0m2021.07.14 11:06:40 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.14 11:06:42 INFO  time: compiled project-0 in 2.42s[0m
+[0m2021.07.14 11:09:37 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.14 11:09:37 INFO  time: compiled project-0 in 0.56s[0m
+[0m2021.07.14 11:09:46 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.14 11:09:48 INFO  time: compiled project-0 in 2.45s[0m
+[0m2021.07.14 11:12:08 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.14 11:12:08 INFO  time: compiled project-0 in 0.52s[0m
+[0m2021.07.14 11:13:31 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.14 11:13:32 INFO  time: compiled project-0 in 1.39s[0m
+[0m2021.07.14 11:16:13 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.14 11:16:15 INFO  time: compiled project-0 in 1.49s[0m
+[0m2021.07.14 11:17:45 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.14 11:17:46 INFO  time: compiled project-0 in 1.05s[0m
+[0m2021.07.14 11:24:12 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.14 11:24:13 INFO  time: compiled project-0 in 1.22s[0m
+[0m2021.07.14 11:25:28 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.14 11:25:28 INFO  time: compiled project-0 in 0.97s[0m
+[0m2021.07.14 11:25:53 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.14 11:25:53 INFO  time: compiled project-0 in 1s[0m
+[0m2021.07.14 11:28:51 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.14 11:28:51 INFO  time: compiled project-0 in 0.29s[0m
+[0m2021.07.14 11:29:09 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.14 11:29:10 INFO  time: compiled project-0 in 1.06s[0m
+[0m2021.07.14 11:32:09 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.14 11:32:09 INFO  time: compiled project-0 in 0.19s[0m
+[0m2021.07.14 11:32:26 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.14 11:32:26 INFO  time: compiled project-0 in 0.28s[0m
+[0m2021.07.14 11:32:32 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.14 11:32:32 INFO  time: compiled project-0 in 0.36s[0m
+[0m2021.07.14 11:32:51 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.14 11:32:51 INFO  time: compiled project-0 in 0.18s[0m
+[0m2021.07.14 11:32:56 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.14 11:32:56 INFO  time: compiled project-0 in 0.22s[0m
+[0m2021.07.14 11:33:08 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.14 11:33:08 INFO  time: compiled project-0 in 0.18s[0m
+[0m2021.07.14 11:33:11 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.14 11:33:11 INFO  time: compiled project-0 in 0.17s[0m
+[0m2021.07.14 11:33:15 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.14 11:33:15 INFO  time: compiled project-0 in 0.33s[0m
+[0m2021.07.14 11:33:20 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.14 11:33:22 INFO  time: compiled project-0 in 1.36s[0m
+[0m2021.07.14 11:34:48 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.14 11:34:50 INFO  time: compiled project-0 in 1.51s[0m
+[0m2021.07.14 11:37:55 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.14 11:37:55 INFO  time: compiled project-0 in 0.3s[0m
+[0m2021.07.14 11:38:03 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.14 11:38:04 INFO  time: compiled project-0 in 1.33s[0m
+[0m2021.07.14 11:40:18 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.14 11:40:19 INFO  time: compiled project-0 in 1.14s[0m
+something's wrong: no file:///C:/Users/gaber/Desktop/Revature%20Items/Project%200/src/main/scala/Elemental_Showdown.scala in Array[String]RangePosition(file:///C:/Users/gaber/Desktop/Revature%20Items/Project%200/src/main/scala/Elemental_Showdown.scala, 197, 197, 210)
+[0m2021.07.14 11:41:37 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.14 11:41:38 INFO  time: compiled project-0 in 1.19s[0m
+Jul 14, 2021 11:41:45 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+[0m2021.07.14 14:15:21 INFO  shutting down Metals[0m
+No more data in the client stdin, exiting...
+No more data in the server stdin, exiting...
+No more data in the client stdin, exiting...
+No more data in the server stdin, exiting...
+Jul 14, 2021 2:15:21 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint notify
+INFO: Failed to send notification message.
+org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.nio.channels.ClosedChannelException
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.notify(RemoteEndpoint.java:126)
+	at org.eclipse.lsp4j.jsonrpc.services.EndpointProxy.invoke(EndpointProxy.java:88)
+	at com.sun.proxy.$Proxy8.onBuildExit(Unknown Source)
+	at scala.meta.internal.metals.BuildServerConnection.$anonfun$shutdown$1(BuildServerConnection.scala:89)
+	at scala.meta.internal.metals.BuildServerConnection.$anonfun$shutdown$1$adapted(BuildServerConnection.scala:85)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.nio.channels.ClosedChannelException
+	at sun.nio.ch.SocketChannelImpl.ensureWriteOpen(SocketChannelImpl.java:268)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:459)
+	at sun.nio.ch.SinkChannelImpl.write(SinkChannelImpl.java:114)
+	at java.nio.channels.Channels.writeFullyImpl(Channels.java:78)
+	at java.nio.channels.Channels.writeFully(Channels.java:98)
+	at java.nio.channels.Channels.access$000(Channels.java:61)
+	at java.nio.channels.Channels$1.write(Channels.java:174)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at java.nio.channels.Channels$1.write(Channels.java:155)
+	at scala.meta.internal.metals.ClosableOutputStream.write(ClosableOutputStream.scala:26)
+	at java.io.FilterOutputStream.write(FilterOutputStream.java:125)
+	at java.io.FilterOutputStream.write(FilterOutputStream.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:67)
+	... 14 more
+
+[0m2021.07.14 14:15:21 INFO  Shut down connection with build server.[0m
