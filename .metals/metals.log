@@ -434,3 +434,13 @@ WARNING: Unmatched cancel notification for request id 3958
 [0m2021.07.16 09:38:31 INFO  time: compiled project-0 in 0.92s[0m
 Jul 16, 2021 9:38:35 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFO: Unsupported notification method: $/setTrace
+[0m2021.07.16 09:46:12 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.16 09:46:12 INFO  time: compiled project-0 in 0.89s[0m
+[0m2021.07.16 09:48:01 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.16 09:48:01 INFO  time: compiled project-0 in 0.88s[0m
+[0m2021.07.16 09:50:11 INFO  shutting down Metals[0m
+[0m2021.07.16 09:50:11 INFO  Shut down connection with build server.[0m
+[0m2021.07.16 09:50:11 INFO  Shut down connection with build server.[0m
+No more data in the client stdin, exiting...
+No more data in the client stdin, exiting...
+No more data in the server stdin, exiting...

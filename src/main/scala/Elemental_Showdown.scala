@@ -36,35 +36,95 @@ object Elemental_Showdown {
     //TODO: CHECK TO SEE IF ANYONE IS DEAD
     while (!isSomeoneDead) {
       playerChoice = getPlayerChoice(p1)
-      computerChoice = getComputerChoice()
-      dmg = determineDmg(playerChoice, computerChoice)
-      
 
-      if (dmg < 0) {
-        p2.damage(0-dmg)
-        damagePrint(computerChoice, playerChoice, p2, p1, dmg.abs)
-      }
-      else if (dmg > 0) {
-        p1.damage(dmg)
-        damagePrint(playerChoice, computerChoice, p1, p2, dmg.abs)
-      }
+      if (playerChoice != '6') info_page() 
       else {
-        //println(playerChoice + " " + computerChoice)
-        noDamagePrint(playerChoice)
-      }
-      //is anyone dead?
-      if (p1.getHP() == 0) {
-        isSomeoneDead = true
-        winner = p2.getName()
-      }
-      else if (p2.getHP() == 0) {
-        isSomeoneDead = true
-        winner = p1.getName()
-      }
+        computerChoice = getComputerChoice()
+        dmg = determineDmg(playerChoice, computerChoice)
+        
+        
 
+        if (dmg < 0) {
+          p2.damage(0-dmg)
+          damagePrint(computerChoice, playerChoice, p2, p1, dmg.abs)
+        }
+        else if (dmg > 0) {
+          p1.damage(dmg)
+          damagePrint(playerChoice, computerChoice, p1, p2, dmg.abs)
+        }
+        else {
+          //println(playerChoice + " " + computerChoice)
+          noDamagePrint(playerChoice)
+        }
+        //is anyone dead?
+        if (p1.getHP() == 0) {
+          isSomeoneDead = true
+          winner = p2.getName()
+        }
+        else if (p2.getHP() == 0) {
+          isSomeoneDead = true
+          winner = p1.getName()
+        }
+      }
     }
     return winner // FIXME
   }
+
+  def info_page() {
+    val scanner = new Scanner(System.in)
+    var choice = ""
+    print("\u001b[2J")
+
+    while (choice != "6") {
+      while (choice != "1" && choice != "2" && choice != "3" && choice != "4" && choice != "5" && choice != "6") 
+      {
+        println("Select an element to learn more:")
+        println("    1) Wood\n    2) Fire\n    3) Earth\n    4) Metal\n    5) Water\n    6) GO BACK TO GAME")
+        print("CHOICE: ")
+        choice = scanner.nextLine()
+      }
+      if (choice != "6") {
+        choice match {
+          case "1" => info_wood()
+          case "2" => info_fire()
+          case "3" => info_earth()
+          case "4" => info_metal()
+          case "5" => info_water()
+          case default => println()
+        }
+      }
+    }
+    
+  }
+
+  def info_wood() {
+    print_wood()
+    
+    print("Type 'c' to continue: ")
+    val scanner = new Scanner(System.in)
+    var choice = ""
+
+    while (choice != "c") choice = scanner.nextLine()
+
+  }
+
+  def info_fire() {
+    
+  }
+
+  def info_earth() {
+    
+  }
+
+  def info_metal() {
+    
+  }
+
+  def info_water() {
+    
+  }
+
+
 
   def print_battle(winner:Int, loser:Int) {
     if(winner == loser) {
