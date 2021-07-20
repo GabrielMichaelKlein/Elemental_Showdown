@@ -37,7 +37,10 @@ object Elemental_Showdown {
     while (!isSomeoneDead) {
       playerChoice = getPlayerChoice(p1)
 
-      if (playerChoice != '6') info_page() 
+      if (playerChoice == 6) {
+        info_page() 
+
+      }
       else {
         computerChoice = getComputerChoice()
         dmg = determineDmg(playerChoice, computerChoice)
@@ -76,6 +79,7 @@ object Elemental_Showdown {
     print("\u001b[2J")
 
     while (choice != "6") {
+      choice = ""
       while (choice != "1" && choice != "2" && choice != "3" && choice != "4" && choice != "5" && choice != "6") 
       {
         println("Select an element to learn more:")
@@ -83,6 +87,7 @@ object Elemental_Showdown {
         print("CHOICE: ")
         choice = scanner.nextLine()
       }
+
       if (choice != "6") {
         choice match {
           case "1" => info_wood()
@@ -99,29 +104,60 @@ object Elemental_Showdown {
 
   def info_wood() {
     print_wood()
-    
+    print("") // Add info about element
+
+    print("Type 'c' to continue: ")
+    val scanner = new Scanner(System.in)
+    var choice = ""
+
+    while (choice != "c"){
+      choice = scanner.nextLine()
+    } 
+
+  }
+
+  def info_fire() {
+    print_fire()
+    print("") // Add info about element
+
     print("Type 'c' to continue: ")
     val scanner = new Scanner(System.in)
     var choice = ""
 
     while (choice != "c") choice = scanner.nextLine()
-
-  }
-
-  def info_fire() {
-    
   }
 
   def info_earth() {
-    
+    print_earth()
+    print("") // Add info about element
+
+    print("Type 'c' to continue: ")
+    val scanner = new Scanner(System.in)
+    var choice = ""
+
+    while (choice != "c") choice = scanner.nextLine()
   }
 
   def info_metal() {
-    
+    print_metal()
+    print("") // Add info about element
+
+    print("Type 'c' to continue: ")
+    val scanner = new Scanner(System.in)
+    var choice = ""
+
+    while (choice != "c") choice = scanner.nextLine()
   }
 
   def info_water() {
-    
+    print_water()
+    print("") // Add info about element
+
+    print("Type 'c' to continue: ")
+    val scanner = new Scanner(System.in)
+    var choice = ""
+
+    while (choice != "c") choice = scanner.nextLine()
   }
 
 
@@ -151,14 +187,18 @@ object Elemental_Showdown {
   }
 
   def print_wood() {
-    println("                  /--/\n                 /  /\n                / °/\n               /  /\n              /__/")
-    println("                              _\n                             | |\n     __      _____   ___   __| |\n     \\ \\ /\\ / / _ \\ / _ \\ / _` |\n      \\ V  V / (_) | (_) | (_| |\n       \\_/\\_/ \\___/ \\___/ \\__,_|")
-
+    println("   ________________________________ \n  |                                |")
+    println("  |                  /--/          |\n  |                 /  /           |\n  |                / °/            |\n  |               /  /             |\n  |              /__/              |")
+    
+    println("  |                           _    |\n  |                          | |   |\n  |  __      _____   ___   __| |   |\n  |  \\ \\ /\\ / / _ \\ / _ \\ / _` |   |\n  |   \\ V  V / (_) | (_) | (_| |   |\n  |    \\_/\\_/ \\___/ \\___/ \\__,_|   |")
+    println("  |                                |\n  |________________________________|")
   }
 
   def print_fire() {
-    println("            )\\ \n          )( ( \\\n         /  )(  (\n         \\_(__)_/\n")
-    println("       __ _          \n      / _(_)         \n     | |_ _ _ __ ___ \n     |  _| | '__/ _ \\\n     | | | | | |  __/\n     |_| |_|_|  \\___|\n")
+    println("   ________________________________ \n  |                                |")
+    println("  |              )\\                |\n  |            )( ( \\              |\n  |           /  )(  (             |\n  |           \\_(__)_/             |")
+    println("  |         __ _                   |\n  |        / _(_)                  |\n  |       | |_ _ _ __ ___          |\n  |       |  _| | '__/ _ \\         |\n  |       | | | | | |  __/         |\n  |       |_| |_|_|  \\___|         |")
+    println("  |                                |\n  |________________________________|")
   }
 
   def print_water() {
@@ -169,13 +209,17 @@ object Elemental_Showdown {
   }
 
   def print_metal() {
-    println("                   /\\\n                  / /\n                 / / \n              __/ /__\n               /_/   \n")
-    println("                     _        _ \n                    | |      | |\n      _ __ ___   ___| |_ __ _| |\n     | '_ ` _ \\ / _ \\ __/ _` | |\n     | | | | | |  __/ || (_| | |\n     |_| |_| |_|\\___|\\__\\__,_|_|\n")
+    println("   ________________________________ \n  |                                |")
+    println("  |                /\\              |\n  |               / /              |\n  |              / /               |\n  |           __/ /__              |\n  |            /_/                 |")
+    println("  |                  _        _    |\n  |                 | |      | |   |\n  |   _ __ ___   ___| |_  __ _| |   |\n  |  | '_ ` _ \\ / _ \\ __/ _` | |   |\n  |  | | | | | |  __/ || (_| | |   |\n  |  |_| |_| |_|\\___|\\__\\__,_|_|   |")
+    println("  |                                |\n  |________________________________|")
   }
 
   def print_earth() {
-    println("               /\\\n              /  \\/\\ \n             /\\   \\ \\\n            /__\\___\\_\\\n")
-    println("                      _   _     \n                     | | | |    \n       ___  __ _ _ __| |_| |__  \n      / _ \\/ _` | '__| __| '_ \\ \n     |  __/ (_| | |  | |_| | | |\n      \\___|\\__,_|_|   \\__|_| |_|\n")
+    println("   ________________________________ \n  |                                |")
+    println("  |               /\\               |\n  |              /  \\/\\            |\n  |             /\\   \\ \\           |\n  |            /__\\___\\_\\          |")
+    println("  |                    _   _       |\n  |                   | | | |      |\n  |     ___  __ _ _ __| |_| |__    |\n  |    / _ \\/ _` | '__| __| '_ \\   |\n  |   |  __/ (_| | |  | |_| | | |  |\n  |    \\___|\\__,_|_|   \\__|_| |_|  |")
+    println("  |                                |\n  |________________________________|")
   }
 
   def print_defeat() {
@@ -222,10 +266,10 @@ object Elemental_Showdown {
   def getPlayerChoice(p1:Player):Int = {
     val scanner = new Scanner(System.in)
     var choice = ""
-    while (choice != "1" && choice != "2" && choice != "3" && choice != "4" && choice != "5") 
+    while (choice != "1" && choice != "2" && choice != "3" && choice != "4" && choice != "5" && choice != "6") 
     {
       println(p1.getName()+", select an element to attack with:")
-      println("    1) Wood\n    2) Fire\n    3) Earth\n    4) Metal\n    5) Water")
+      println("    1) Wood\n    2) Fire\n    3) Earth\n    4) Metal\n    5) Water\n    6) INFO ON THE ELEMENTS")
       print("CHOICE: ")
       choice = scanner.nextLine()
     }
