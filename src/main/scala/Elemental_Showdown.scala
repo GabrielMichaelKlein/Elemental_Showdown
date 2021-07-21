@@ -8,6 +8,9 @@ object Elemental_Showdown {
     val PLAYER_HP = 20
     val scanner = new Scanner(System.in)
 
+    print("\u001b[2J")
+    print_showdown()
+    println()
     print("Enter your name: ")
 
     // FOR TESTING PRINTS OF ASCII
@@ -84,19 +87,19 @@ object Elemental_Showdown {
   def info_page() {
     val scanner = new Scanner(System.in)
     var choice = ""
-    print("\u001b[2J")
-    println("Wuxing, usually translated as Five Phases, is a fivefold conceptual scheme that many traditional Chinese fields used to explain a wide array of phenomena,")
-    println("from cosmic cycles to the interaction between internal organs, and from the succession of political regimes to the properties of medicinal drugs. The \"Five Phases\" are Fire (huo), Water (shui),")
-    println("Wood (mù), Metal or Gold (jin), and Earth or Soil (tu). This order of presentation is known as the \"Days of the Week\" sequence. In the order of \"mutual generation\" (xiangsheng), they are Wood,") 
-    println("Fire, Earth, Metal, and Water. In the order of \"mutual overcoming\" (xiangkè), they are Wood, Earth, Water, Fire, and Metal.")
-    println("The system of five phases was used for describing interactions and relationships between phenomena. After it came to maturity in the second or first century BCE during the Han dynasty, this device was employed in")
-    println("many fields of early Chinese thought, including seemingly disparate fields such as Yi jing divination, alchemy, feng shui, astrology, traditional Chinese medicine, music, military strategy, and martial arts.")
-    println("\nhttps://en.wikipedia.org/wiki/Wuxing_(Chinese_philosophy)  \n")
 
     while (choice != "6") {
       choice = ""
       while (choice != "1" && choice != "2" && choice != "3" && choice != "4" && choice != "5" && choice != "6") 
       {
+        print("\u001b[2J")
+        println("Wuxing, usually translated as Five Phases, is a fivefold conceptual scheme that many traditional Chinese fields used to explain a wide array of phenomena,")
+        println("from cosmic cycles to the interaction between internal organs, and from the succession of political regimes to the properties of medicinal drugs. The \"Five Phases\" are Fire (huo), Water (shui),")
+        println("Wood (mù), Metal or Gold (jin), and Earth or Soil (tu). This order of presentation is known as the \"Days of the Week\" sequence. In the order of \"mutual generation\" (xiangsheng), they are Wood,") 
+        println("Fire, Earth, Metal, and Water. In the order of \"mutual overcoming\" (xiangkè), they are Wood, Earth, Water, Fire, and Metal.")
+        println("The system of five phases was used for describing interactions and relationships between phenomena. After it came to maturity in the second or first century BCE during the Han dynasty, this device was employed in")
+        println("many fields of early Chinese thought, including seemingly disparate fields such as Yi jing divination, alchemy, feng shui, astrology, traditional Chinese medicine, music, military strategy, and martial arts.")
+        println("\nhttps://en.wikipedia.org/wiki/Wuxing_(Chinese_philosophy)  \n")
         println("Select an element to learn more:")
         println("    1) Wood\n    2) Fire\n    3) Earth\n    4) Metal\n    5) Water\n    6) GO BACK TO GAME")
         print("CHOICE: ")
@@ -118,6 +121,7 @@ object Elemental_Showdown {
   }
 
   def info_wood() {
+    print("\u001b[2J")
     print_wood()
     println("WOOD associations:\n\nColor: Green\nSeason: Spring\nPlanet: Jupiter\nSymbol: Dragon\nClimate: Windy\n") // Add info about element
     println("Elemental interactions:\n\nFire BURNS Wood (-1 health)\nWood DEPLETES Earth (2 dmg)\nMetal CHOPS Wood (-2 health)\nWood DEPLETES water (1 dmg)\n")
@@ -131,6 +135,7 @@ object Elemental_Showdown {
   }
 
   def info_fire() {
+    print("\u001b[2J")
     print_fire()
     println("FIRE associations:\n\nColor: Red\nSeason: Summer\nPlanet: Mars\nSymbol: Phoenix\nClimate: Hot\n") // Add info about element
     println("Elemental interactions:\n\nEarth SMOTHERS Fire (-1 health)\nFire MELTS Metal (2 dmg)\nWater EXTINGUISHES Fire (-2 health)\nFire BURNS Wood (1 dmg)\n")
@@ -143,6 +148,7 @@ object Elemental_Showdown {
   }
 
   def info_earth() {
+    print("\u001b[2J")
     print_earth()
     println("EARTH associations:\n\nColor: Brown\nSeason: (Between Summer and Autumn)\nPlanet: Saturn\nSymbol: Cauldron\nClimate: Rainy\n") // Add info about element
     println("Elemental interactions:\n\nMetal MINES Earth (-1 health)\nEarth OBSTRUCTS Water (2 dmg)\nWood DEPLETES Earth (-2 health)\nEarth SMOTHERS Fire (1 dmg)\n")
@@ -155,6 +161,7 @@ object Elemental_Showdown {
   }
 
   def info_metal() {
+    print("\u001b[2J")
     print_metal()
     println("METAL associations:\n\nColor: White\nSeason: Autumn\nPlanet: Venus\nSymbol: Tiger\nClimate: Dry\n") // Add info about element
     println("Elemental interactions:\n\nWater RUSTS Metal (-1 health)\nMetal CHOPS Wood (2 dmg)\nFire MELTS Metal (-2 health)\nMetal MINES Earth (1 dmg)\n")
@@ -167,6 +174,7 @@ object Elemental_Showdown {
   }
 
   def info_water() {
+    print("\u001b[2J")
     print_water()
     println("WATER associations:\n\nColor: Black\nSeason: Winter\nPlanet: Mercury\nSymbol: Turtle\nClimate: Cold\n") // Add info about element
     println("Elemental interactions:\n\nWood DEPLETES Water (-1 health)\nWater EXTINGUISHES Fire (2 dmg)\nEarth OBSTRUCTS Water (-2 health)\nWater RUSTS Metal (1 dmg)\n")
@@ -202,6 +210,12 @@ object Elemental_Showdown {
       case 5 => print_water()
       case default => println()
     }
+  }
+
+  def print_showdown() {
+    print("      _                           _        _     _                      _                     \n     | |                         | |      | |   | |                    | |                    \n  ___| | ___ _ __ ___   ___ _ __ | |_ __ _| |___| |__   _____      ____| | _____      ___ __  \n")
+    print(" / _ \\ |/ _ \\ '_ ` _ \\ / _ \\ '_ \\| __/ _` | / __| '_ \\ / _ \\ \\ /\\ / / _` |/ _ \\ \\ /\\ / / '_ \\ \n|  __/ |  __/ | | | | |  __/ | | | || (_| | \\__ \\ | | | (_) \\ V  V / (_| | (_) \\ V  V /| | | |\n")
+    print(" \\___|_|\\___|_| |_| |_|\\___|_| |_|\\__\\__,_|_|___/_| |_|\\___/ \\_/\\_/ \\__,_|\\___/ \\_/\\_/ |_| |_|\n")
   }
 
   def print_wood() {
@@ -287,7 +301,7 @@ object Elemental_Showdown {
     while (choice != "1" && choice != "2" && choice != "3" && choice != "4" && choice != "5" && choice != "6") 
     {
       println(p1.getName()+", select an element to attack with:")
-      println("    1) Wood\n    2) Fire\n    3) Earth\n    4) Metal\n    5) Water\n    6) INFO ON THE ELEMENTS")
+      println("    1) Wood\n    2) Fire\n    3) Earth\n    4) Metal\n    5) Water\n    6) INFO ON THE ELEMENTS\n q) QUIT")
       print("CHOICE: ")
       choice = scanner.nextLine()
       if (choice == "q") return 0
