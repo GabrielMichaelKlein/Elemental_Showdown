@@ -1,31 +1,49 @@
-// TODO: Add flair (ASCII art), different damage values, potential GUI (Swing?)
+/**************************************
+ * Gabe Klein
+ * 7/21/21
+ * p0 project
+ * Elemental Showdown
+ * 
+ * This is a command line interactive fighting game
+ * based on the Wuxing elements. It is much like
+ * rock-paper-scissors where each of the elemenmts
+ * will "beat" specific other elements every single
+ * time. The user plays against a computer who makes
+ * completely random moves.
+ * ************************************/
 
 import scala.collection.mutable.ArrayBuffer
 import java.util.Scanner
-object Elemental_Showdown {
-  val elements = Map(1->"Wood", 2->"Fire", 3->"Earth", 4->"Metal", 5->"Water")
-  def main(args: Array[String]): Unit = {
-    val PLAYER_HP = 20
-    val scanner = new Scanner(System.in)
 
-    print("\u001b[2J")
+
+object Elemental_Showdown {
+  /*
+  This is the object that holds the main method as well as many print methods
+  for the game
+  */
+
+  val elements = Map(1->"Wood", 2->"Fire", 3->"Earth", 4->"Metal", 5->"Water") // For use with printing choices
+
+  def main(args: Array[String]): Unit = {
+    /*
+    Main method
+    */
+
+    val PLAYER_HP = 20 // Can be changed if you want a shorter or longer game
+    val scanner = new Scanner(System.in) 
+
+    print("\u001b[2J") // This print statement clears the terminal
     print_showdown()
     println()
+    
     print("Enter your name: ")
-
-    // FOR TESTING PRINTS OF ASCII
-    //println()
-    //print_defeat()
-
-
     var name = scanner.nextLine()
     print("\u001b[2J")
-    //scanner.close()
 
     val p1 = new Player(name, PLAYER_HP)
     val comp = new Player("Computer", PLAYER_HP)
     
-    var winner = playGame(p1, comp)
+    var winner = playGame(p1, comp) 
     
     println()
     if (winner == "-1") println("Game quit early.")
@@ -35,28 +53,28 @@ object Elemental_Showdown {
   }
 
   def playGame(p1:Player, p2:Player):String = {
-    var isSomeoneDead = false
+    /*
+    This method controls the turns of the game.
+    */
+    var isSomeoneDead = false // Once a player dies, it's game over
     var winner = ""
     var playerChoice = 0
     var computerChoice = 0
     var dmg = 0
-    //TODO: CHECK TO SEE IF ANYONE IS DEAD
+
     while (!isSomeoneDead) {
       playerChoice = getPlayerChoice(p1)
 
-      if (playerChoice == 6) {
+      if (playerChoice == 6) { // If user wants to look at info for the elements
         info_page() 
-
       } 
-      else if (playerChoice == 0) {
+      else if (playerChoice == 0) { // If user wishes to quit
         isSomeoneDead = true
         winner = "-1"
       }
       else {
         computerChoice = getComputerChoice()
         dmg = determineDmg(playerChoice, computerChoice)
-        
-        
 
         if (dmg < 0) {
           p2.damage(0-dmg)
@@ -67,28 +85,30 @@ object Elemental_Showdown {
           damagePrint(playerChoice, computerChoice, p1, p2, dmg.abs)
         }
         else {
-          //println(playerChoice + " " + computerChoice)
           noDamagePrint(playerChoice)
         }
-        //is anyone dead?
-        if (p1.getHP() == 0) {
+
+        if (p1.getHP() == 0) { // Check if player is dead
           isSomeoneDead = true
           winner = p2.getName()
         }
-        else if (p2.getHP() == 0) {
+        else if (p2.getHP() == 0) { // Check if computer is dead
           isSomeoneDead = true
           winner = p1.getName()
         }
       }
     }
-    return winner // FIXME
+    return winner // Returns name of winner. If user quits early, this returns "-1"
   }
 
   def info_page() {
+    /*
+    This method prints info about Wuxing and lets the user choose to get more info on each element.
+    */
     val scanner = new Scanner(System.in)
     var choice = ""
 
-    while (choice != "6") {
+    while (choice != "6") { // "6" goes back to game
       choice = ""
       while (choice != "1" && choice != "2" && choice != "3" && choice != "4" && choice != "5" && choice != "6") 
       {
@@ -121,6 +141,9 @@ object Elemental_Showdown {
   }
 
   def info_wood() {
+    /*
+    Prints info on Wood
+    */
     print("\u001b[2J")
     print_wood()
     println("WOOD associations:\n\nColor: Green\nSeason: Spring\nPlanet: Jupiter\nSymbol: Dragon\nClimate: Windy\n") // Add info about element
@@ -135,6 +158,9 @@ object Elemental_Showdown {
   }
 
   def info_fire() {
+    /*
+    Prints info on Fire
+    */
     print("\u001b[2J")
     print_fire()
     println("FIRE associations:\n\nColor: Red\nSeason: Summer\nPlanet: Mars\nSymbol: Phoenix\nClimate: Hot\n") // Add info about element
@@ -148,6 +174,9 @@ object Elemental_Showdown {
   }
 
   def info_earth() {
+    /*
+    Prints info on Earth
+    */
     print("\u001b[2J")
     print_earth()
     println("EARTH associations:\n\nColor: Brown\nSeason: (Between Summer and Autumn)\nPlanet: Saturn\nSymbol: Cauldron\nClimate: Rainy\n") // Add info about element
@@ -161,6 +190,9 @@ object Elemental_Showdown {
   }
 
   def info_metal() {
+    /*
+    Prints info on Metal
+    */
     print("\u001b[2J")
     print_metal()
     println("METAL associations:\n\nColor: White\nSeason: Autumn\nPlanet: Venus\nSymbol: Tiger\nClimate: Dry\n") // Add info about element
@@ -174,6 +206,9 @@ object Elemental_Showdown {
   }
 
   def info_water() {
+    /*
+    Prints info on Water
+    */
     print("\u001b[2J")
     print_water()
     println("WATER associations:\n\nColor: Black\nSeason: Winter\nPlanet: Mercury\nSymbol: Turtle\nClimate: Cold\n") // Add info about element
@@ -186,9 +221,10 @@ object Elemental_Showdown {
     while (choice != "c") choice = scanner.nextLine()
   }
 
-
-
   def print_battle(winner:Int, loser:Int) {
+    /*
+    Prints the result of the battle, given player element and computer element.
+    */
     if(winner == loser) {
       print_tie()
       return
@@ -212,6 +248,10 @@ object Elemental_Showdown {
     }
   }
 
+  /************************************
+   * The following methods print ASCII art that is used throughout the program
+   * 
+   * *********************************/
   def print_showdown() {
     print("      _                           _        _     _                      _                     \n     | |                         | |      | |   | |                    | |                    \n  ___| | ___ _ __ ___   ___ _ __ | |_ __ _| |___| |__   _____      ____| | _____      ___ __  \n")
     print(" / _ \\ |/ _ \\ '_ ` _ \\ / _ \\ '_ \\| __/ _` | / __| '_ \\ / _ \\ \\ /\\ / / _` |/ _ \\ \\ /\\ / / '_ \\ \n|  __/ |  __/ | | | | |  __/ | | | || (_| | \\__ \\ | | | (_) \\ V  V / (_| | (_) \\ V  V /| | | |\n")
@@ -262,15 +302,19 @@ object Elemental_Showdown {
     println("      _   _      \n     | | (_)     \n     | |_ _  ___ \n     | __| |/ _ \\\n     | |_| |  __/\n      \\__|_|\\___|\n")
   }
 
-  // TODO: UPDATE PRINT STATEMENT TO ADD FLAIR
   def damagePrint(losingElementInt:Int, winningElement:Int, loser:Player, winner:Player, dmg:Int) {
+    /*
+    Prints when damage has been suffered
+    */
     print_battle(winningElement, losingElementInt)
     println(winner.getName + " has damaged " + loser.getName + " by using " + elements(winningElement) + " against " + elements(losingElementInt))
     println(loser.getName()+" has suffered " + dmg + " damage! They now have " + loser.getHP + " health.")
   }
 
-  // TODO: UPDATE FOR FLAIR
   def noDamagePrint(element:Int) {
+    /*
+    Prints when both players played the same element
+    */
     print_tie()
     println("Both players used " + element + ". No damage given!")
   }
@@ -291,11 +335,13 @@ object Elemental_Showdown {
     else return 0
   }
 
-  def getComputerChoice():Int = {
-    return scala.util.Random.nextInt(5) + 1
-  }
+  // Returns a random element for the computer (1-5)
+  def getComputerChoice():Int = return scala.util.Random.nextInt(5) + 1
 
   def getPlayerChoice(p1:Player):Int = {
+    /*
+    Asks for user input. Returns 0 if player wants to quit
+    */
     val scanner = new Scanner(System.in)
     var choice = ""
     while (choice != "1" && choice != "2" && choice != "3" && choice != "4" && choice != "5" && choice != "6") 
@@ -314,14 +360,20 @@ object Elemental_Showdown {
 }
 
 class Player(name:String, health:Int) {
+  /*
+  This class holds the blueplrint for player objects. Each object 
+  stores a name and health. It is fully encapsulated
+  */
   private var NAME = name
   private var HP = health
-  //private val movesMade = ArrayBuffer[String]()
 
+  // Getter method for name
   def getName():String = NAME
 
+  // Getter method for health
   def getHP():Int = HP
 
+  // Damages player and returns health
   def damage(dmg:Int):Int = {
     HP -= dmg
     if (HP < 0) HP = 0

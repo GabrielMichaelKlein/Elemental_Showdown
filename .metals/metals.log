@@ -598,3 +598,56 @@ Jul 21, 2021 9:17:17 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellat
 WARNING: Unmatched cancel notification for request id 9293
 [0m2021.07.21 09:17:18 INFO  compiling project-0 (1 scala source)[0m
 [0m2021.07.21 09:17:19 INFO  time: compiled project-0 in 1.13s[0m
+[0m2021.07.21 12:28:21 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.21 12:28:21 INFO  C:\Users\gaber\Desktop\Revature Items\Project 0\src\main\scala\Elemental_Showdown.scala:210:11: stale bloop error: unclosed string literal
+    print("      _                           _        _     _                      _                     
+          ^[0m
+[0m2021.07.21 12:28:21 INFO  C:\Users\gaber\Desktop\Revature Items\Project 0\src\main\scala\Elemental_Showdown.scala:210:11: stale bloop error: unclosed string literal
+    print("      _                           _        _     _                      _                     
+          ^[0m
+[0m2021.07.21 12:28:21 INFO  C:\Users\gaber\Desktop\Revature Items\Project 0\src\main\scala\Elemental_Showdown.scala:211:194: stale bloop error: unclosed string literal
+     | |                         | |      | |   | |                    | |                    \n  ___| | ___ _ __ ___   ___ _ __ | |_ __ _| |___| |__   _____      ____| | _____      ___ __  \n")
+                                                                                                                                                                                                 ^[0m
+[0m2021.07.21 12:28:21 INFO  C:\Users\gaber\Desktop\Revature Items\Project 0\src\main\scala\Elemental_Showdown.scala:214:3: stale bloop error: ')' expected but '}' found.
+  }
+  ^[0m
+[0m2021.07.21 12:28:21 INFO  time: compiled project-0 in 0.57s[0m
+[0m2021.07.21 12:28:36 INFO  C:\Users\gaber\Desktop\Revature Items\Project 0\src\main\scala\Elemental_Showdown.scala:210:11: stale bloop error: unclosed string literal
+    print("      _                           _        _     _                      _                     
+          ^[0m
+[0m2021.07.21 12:28:36 INFO  C:\Users\gaber\Desktop\Revature Items\Project 0\src\main\scala\Elemental_Showdown.scala:211:194: stale bloop error: unclosed string literal
+     | |                         | |      | |   | |                    | |                    \n  ___| | ___ _ __ ___   ___ _ __ | |_ __ _| |___| |__   _____      ____| | _____      ___ __  \n")
+                                                                                                                                                                                                 ^[0m
+[0m2021.07.21 12:28:36 INFO  C:\Users\gaber\Desktop\Revature Items\Project 0\src\main\scala\Elemental_Showdown.scala:214:3: stale bloop error: ')' expected but '}' found.
+  }
+  ^[0m
+[0m2021.07.21 12:28:36 INFO  C:\Users\gaber\Desktop\Revature Items\Project 0\src\main\scala\Elemental_Showdown.scala:210:11: stale bloop error: unclosed string literal
+    print("      _                           _        _     _                      _                     
+          ^[0m
+[0m2021.07.21 12:28:36 INFO  C:\Users\gaber\Desktop\Revature Items\Project 0\src\main\scala\Elemental_Showdown.scala:211:194: stale bloop error: unclosed string literal
+     | |                         | |      | |   | |                    | |                    \n  ___| | ___ _ __ ___   ___ _ __ | |_ __ _| |___| |__   _____      ____| | _____      ___ __  \n")
+                                                                                                                                                                                                 ^[0m
+[0m2021.07.21 12:28:36 INFO  C:\Users\gaber\Desktop\Revature Items\Project 0\src\main\scala\Elemental_Showdown.scala:214:3: stale bloop error: ')' expected but '}' found.
+  }
+  ^[0m
+[0m2021.07.21 12:28:39 INFO  C:\Users\gaber\Desktop\Revature Items\Project 0\src\main\scala\Elemental_Showdown.scala:210:11: stale bloop error: unclosed string literal
+    print("      _                           _        _     _                      _                     
+          ^[0m
+[0m2021.07.21 12:28:39 INFO  C:\Users\gaber\Desktop\Revature Items\Project 0\src\main\scala\Elemental_Showdown.scala:211:194: stale bloop error: unclosed string literal
+     | |                         | |      | |   | |                    | |                    \n  ___| | ___ _ __ ___   ___ _ __ | |_ __ _| |___| |__   _____      ____| | _____      ___ __  \n")
+                                                                                                                                                                                                 ^[0m
+[0m2021.07.21 12:28:39 INFO  C:\Users\gaber\Desktop\Revature Items\Project 0\src\main\scala\Elemental_Showdown.scala:214:3: stale bloop error: ')' expected but '}' found.
+  }
+  ^[0m
+[0m2021.07.21 12:28:44 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.21 12:28:46 INFO  time: compiled project-0 in 2.1s[0m
+[0m2021.07.21 12:29:02 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.21 12:29:03 INFO  time: compiled project-0 in 1.09s[0m
+Jul 21, 2021 12:44:53 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 10019
+[0m2021.07.21 12:44:59 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.21 12:45:00 INFO  time: compiled project-0 in 1.25s[0m
+[0m2021.07.21 12:45:16 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.21 12:45:17 INFO  time: compiled project-0 in 1.25s[0m
+[0m2021.07.21 12:46:55 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.21 12:46:57 INFO  time: compiled project-0 in 2.52s[0m
