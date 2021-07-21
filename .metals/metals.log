@@ -512,3 +512,53 @@ WARNING: Unmatched cancel notification for request id 1230
 [0m2021.07.20 10:13:04 INFO  time: compiled project-0 in 2.22s[0m
 Jul 20, 2021 10:13:17 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFO: Unsupported notification method: $/setTrace
+[0m2021.07.20 13:20:30 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.20 13:20:33 INFO  time: compiled project-0 in 2.78s[0m
+Jul 20, 2021 1:21:24 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2820
+[0m2021.07.20 13:21:59 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.20 13:22:01 INFO  time: compiled project-0 in 2.04s[0m
+[0m2021.07.20 13:22:41 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.20 13:22:43 INFO  time: compiled project-0 in 1.44s[0m
+[0m2021.07.20 13:24:10 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.20 13:24:12 INFO  time: compiled project-0 in 1.44s[0m
+[0m2021.07.20 13:26:41 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.20 13:26:42 INFO  time: compiled project-0 in 1.43s[0m
+[0m2021.07.20 13:30:48 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\gaber\AppData\Local\scalameta\metals\cache\dap-server.trace.json[0m
+[0m2021.07.20 13:30:48 INFO  Listening for transport dt_socket at address: 65120[0m
+[0m2021.07.20 13:30:48 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\gaber\AppData\Local\scalameta\metals\cache\dap-client.trace.json[0m
+[0m2021.07.20 13:30:48 INFO  Starting debug proxy for [Elemental_Showdown][0m
+[0m2021.07.20 13:30:48 INFO  Trying to attach to remote debuggee VM 127.0.0.1:65120 .[0m
+[0m2021.07.20 13:30:48 INFO  Attaching to debuggee VM succeeded.[0m
+[0m2021.07.20 13:31:05 INFO  Enter your name: [0m
+[0m2021.07.20 13:31:05 INFO  Canceling debug proxy for [Elemental_Showdown][0m
+[0m2021.07.20 13:33:09 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.20 13:33:10 INFO  time: compiled project-0 in 1.49s[0m
+[0m2021.07.20 13:38:51 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.20 13:38:53 INFO  time: compiled project-0 in 1.78s[0m
+[0m2021.07.20 13:39:48 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.20 13:39:49 INFO  time: compiled project-0 in 1.3s[0m
+[0m2021.07.20 13:43:24 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.20 13:43:25 INFO  time: compiled project-0 in 1.27s[0m
+[0m2021.07.20 13:50:14 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.20 13:50:15 INFO  time: compiled project-0 in 1.24s[0m
+[0m2021.07.20 13:51:27 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.20 13:51:28 INFO  time: compiled project-0 in 1.26s[0m
+[0m2021.07.20 13:51:37 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.20 13:51:38 INFO  time: compiled project-0 in 1.26s[0m
+[0m2021.07.20 13:51:41 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.20 13:51:42 INFO  time: compiled project-0 in 1.26s[0m
+[0m2021.07.20 13:52:30 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.20 13:52:32 INFO  time: compiled project-0 in 1.21s[0m
+[0m2021.07.20 13:56:15 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.20 13:56:16 INFO  time: compiled project-0 in 1.17s[0m
+[0m2021.07.20 13:56:52 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.20 13:56:54 INFO  time: compiled project-0 in 1.32s[0m
+[0m2021.07.20 14:02:34 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.20 14:02:36 INFO  time: compiled project-0 in 1.22s[0m
+[0m2021.07.20 14:03:08 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.20 14:03:10 INFO  time: compiled project-0 in 1.25s[0m
+[0m2021.07.20 14:03:28 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.20 14:03:30 INFO  time: compiled project-0 in 1.89s[0m
+[0m2021.07.20 15:27:02 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.20 15:27:03 INFO  time: compiled project-0 in 1.1s[0m

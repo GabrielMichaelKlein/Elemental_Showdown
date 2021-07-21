@@ -23,8 +23,12 @@ object Elemental_Showdown {
     val comp = new Player("Computer", PLAYER_HP)
     
     var winner = playGame(p1, comp)
+    
     println()
-    println(winner+ " is the WINNER!!!")
+    if (winner == "-1") println("Game quit early.")
+    else println(winner+ " is the WINNER!!!")
+    println("(enter any key to exit)")
+    scanner.nextLine()
   }
 
   def playGame(p1:Player, p2:Player):String = {
@@ -40,6 +44,10 @@ object Elemental_Showdown {
       if (playerChoice == 6) {
         info_page() 
 
+      } 
+      else if (playerChoice == 0) {
+        isSomeoneDead = true
+        winner = "-1"
       }
       else {
         computerChoice = getComputerChoice()
@@ -77,6 +85,13 @@ object Elemental_Showdown {
     val scanner = new Scanner(System.in)
     var choice = ""
     print("\u001b[2J")
+    println("Wuxing, usually translated as Five Phases, is a fivefold conceptual scheme that many traditional Chinese fields used to explain a wide array of phenomena,")
+    println("from cosmic cycles to the interaction between internal organs, and from the succession of political regimes to the properties of medicinal drugs. The \"Five Phases\" are Fire (huo), Water (shui),")
+    println("Wood (mù), Metal or Gold (jin), and Earth or Soil (tu). This order of presentation is known as the \"Days of the Week\" sequence. In the order of \"mutual generation\" (xiangsheng), they are Wood,") 
+    println("Fire, Earth, Metal, and Water. In the order of \"mutual overcoming\" (xiangkè), they are Wood, Earth, Water, Fire, and Metal.")
+    println("The system of five phases was used for describing interactions and relationships between phenomena. After it came to maturity in the second or first century BCE during the Han dynasty, this device was employed in")
+    println("many fields of early Chinese thought, including seemingly disparate fields such as Yi jing divination, alchemy, feng shui, astrology, traditional Chinese medicine, music, military strategy, and martial arts.")
+    println("\nhttps://en.wikipedia.org/wiki/Wuxing_(Chinese_philosophy)  \n")
 
     while (choice != "6") {
       choice = ""
@@ -104,21 +119,21 @@ object Elemental_Showdown {
 
   def info_wood() {
     print_wood()
-    print("") // Add info about element
+    println("WOOD associations:\n\nColor: Green\nSeason: Spring\nPlanet: Jupiter\nSymbol: Dragon\nClimate: Windy\n") // Add info about element
+    println("Elemental interactions:\n\nFire BURNS Wood (-1 health)\nWood DEPLETES Earth (2 dmg)\nMetal CHOPS Wood (-2 health)\nWood DEPLETES water (1 dmg)\n")
 
     print("Type 'c' to continue: ")
     val scanner = new Scanner(System.in)
     var choice = ""
 
-    while (choice != "c"){
-      choice = scanner.nextLine()
-    } 
+    while (choice != "c") choice = scanner.nextLine()
 
   }
 
   def info_fire() {
     print_fire()
-    print("") // Add info about element
+    println("FIRE associations:\n\nColor: Red\nSeason: Summer\nPlanet: Mars\nSymbol: Phoenix\nClimate: Hot\n") // Add info about element
+    println("Elemental interactions:\n\nEarth SMOTHERS Fire (-1 health)\nFire MELTS Metal (2 dmg)\nWater EXTINGUISHES Fire (-2 health)\nFire BURNS Wood (1 dmg)\n")
 
     print("Type 'c' to continue: ")
     val scanner = new Scanner(System.in)
@@ -129,7 +144,8 @@ object Elemental_Showdown {
 
   def info_earth() {
     print_earth()
-    print("") // Add info about element
+    println("EARTH associations:\n\nColor: Brown\nSeason: (Between Summer and Autumn)\nPlanet: Saturn\nSymbol: Cauldron\nClimate: Rainy\n") // Add info about element
+    println("Elemental interactions:\n\nMetal MINES Earth (-1 health)\nEarth OBSTRUCTS Water (2 dmg)\nWood DEPLETES Earth (-2 health)\nEarth SMOTHERS Fire (1 dmg)\n")
 
     print("Type 'c' to continue: ")
     val scanner = new Scanner(System.in)
@@ -140,7 +156,8 @@ object Elemental_Showdown {
 
   def info_metal() {
     print_metal()
-    print("") // Add info about element
+    println("METAL associations:\n\nColor: White\nSeason: Autumn\nPlanet: Venus\nSymbol: Tiger\nClimate: Dry\n") // Add info about element
+    println("Elemental interactions:\n\nWater RUSTS Metal (-1 health)\nMetal CHOPS Wood (2 dmg)\nFire MELTS Metal (-2 health)\nMetal MINES Earth (1 dmg)\n")
 
     print("Type 'c' to continue: ")
     val scanner = new Scanner(System.in)
@@ -151,7 +168,8 @@ object Elemental_Showdown {
 
   def info_water() {
     print_water()
-    print("") // Add info about element
+    println("WATER associations:\n\nColor: Black\nSeason: Winter\nPlanet: Mercury\nSymbol: Turtle\nClimate: Cold\n") // Add info about element
+    println("Elemental interactions:\n\nWood DEPLETES Water (-1 health)\nWater EXTINGUISHES Fire (2 dmg)\nEarth OBSTRUCTS Water (-2 health)\nWater RUSTS Metal (1 dmg)\n")
 
     print("Type 'c' to continue: ")
     val scanner = new Scanner(System.in)
@@ -211,7 +229,7 @@ object Elemental_Showdown {
   def print_metal() {
     println("   ________________________________ \n  |                                |")
     println("  |                /\\              |\n  |               / /              |\n  |              / /               |\n  |           __/ /__              |\n  |            /_/                 |")
-    println("  |                  _        _    |\n  |                 | |      | |   |\n  |   _ __ ___   ___| |_  __ _| |   |\n  |  | '_ ` _ \\ / _ \\ __/ _` | |   |\n  |  | | | | | |  __/ || (_| | |   |\n  |  |_| |_| |_|\\___|\\__\\__,_|_|   |")
+    println("  |                  _        _    |\n  |                 | |      | |   |\n  |   _ __ ___   ___| |_ __ _| |   |\n  |  | '_ ` _ \\ / _ \\ __/ _` | |   |\n  |  | | | | | |  __/ || (_| | |   |\n  |  |_| |_| |_|\\___|\\__\\__,_|_|   |")
     println("  |                                |\n  |________________________________|")
   }
 
@@ -272,6 +290,7 @@ object Elemental_Showdown {
       println("    1) Wood\n    2) Fire\n    3) Earth\n    4) Metal\n    5) Water\n    6) INFO ON THE ELEMENTS")
       print("CHOICE: ")
       choice = scanner.nextLine()
+      if (choice == "q") return 0
     }
   
   print("\u001b[2J")
