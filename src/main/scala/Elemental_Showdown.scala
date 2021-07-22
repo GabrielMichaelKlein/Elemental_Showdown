@@ -113,6 +113,8 @@ object Elemental_Showdown {
       while (choice != "1" && choice != "2" && choice != "3" && choice != "4" && choice != "5" && choice != "6") 
       {
         print("\u001b[2J")
+        print_showdown()
+        println()
         println("Wuxing, usually translated as Five Phases, is a fivefold conceptual scheme that many traditional Chinese fields used to explain a wide array of phenomena,")
         println("from cosmic cycles to the interaction between internal organs, and from the succession of political regimes to the properties of medicinal drugs. The \"Five Phases\" are Fire (huo), Water (shui),")
         println("Wood (mù), Metal or Gold (jin), and Earth or Soil (tu). This order of presentation is known as the \"Days of the Week\" sequence. In the order of \"mutual generation\" (xiangsheng), they are Wood,") 
@@ -136,6 +138,7 @@ object Elemental_Showdown {
           case default => println()
         }
       }
+      print("\u001b[2J")
     }
   }
 
@@ -345,7 +348,7 @@ object Elemental_Showdown {
     while (choice != "1" && choice != "2" && choice != "3" && choice != "4" && choice != "5" && choice != "6") 
     {
       println(p1.getName()+", select an element to attack with:")
-      println("    1) Wood\n    2) Fire\n    3) Earth\n    4) Metal\n    5) Water\n    6) INFO ON THE ELEMENTS\n q) QUIT")
+      println("    1) Wood\n    2) Fire\n    3) Earth\n    4) Metal\n    5) Water\n    6) INFO ON THE ELEMENTS\n    q) QUIT")
       print("CHOICE: ")
       choice = scanner.nextLine()
       if (choice == "q") return 0
