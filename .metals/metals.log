@@ -651,3 +651,20 @@ WARNING: Unmatched cancel notification for request id 10019
 [0m2021.07.21 12:45:17 INFO  time: compiled project-0 in 1.25s[0m
 [0m2021.07.21 12:46:55 INFO  compiling project-0 (1 scala source)[0m
 [0m2021.07.21 12:46:57 INFO  time: compiled project-0 in 2.52s[0m
+Jul 21, 2021 1:57:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 10191
+[0m2021.07.21 14:14:57 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.21 14:14:59 INFO  time: compiled project-0 in 2.27s[0m
+[0m2021.07.21 14:15:16 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.21 14:15:18 INFO  time: compiled project-0 in 1.81s[0m
+[0m2021.07.21 14:17:26 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.21 14:17:27 INFO  time: compiled project-0 in 1.46s[0m
+[0m2021.07.21 14:18:20 INFO  compiling project-0 (1 scala source)[0m
+[0m2021.07.21 14:18:21 INFO  time: compiled project-0 in 1.39s[0m
+[0m2021.07.21 14:18:52 INFO  shutting down Metals[0m
+[0m2021.07.21 14:18:52 INFO  Shut down connection with build server.[0m
+[0m2021.07.21 14:18:52 INFO  Shut down connection with build server.[0mNo more data in the server stdin, exiting...
+
+No more data in the client stdin, exiting...
+No more data in the client stdin, exiting...
+No more data in the server stdin, exiting...

@@ -137,7 +137,6 @@ object Elemental_Showdown {
         }
       }
     }
-    
   }
 
   def info_wood() {
@@ -154,7 +153,6 @@ object Elemental_Showdown {
     var choice = ""
 
     while (choice != "c") choice = scanner.nextLine()
-
   }
 
   def info_fire() {
@@ -356,7 +354,6 @@ object Elemental_Showdown {
   print("\u001b[2J")
   return choice.toInt
   }
-
 }
 
 class Player(name:String, health:Int) {
